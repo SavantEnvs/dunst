@@ -1,0 +1,9 @@
+project: savantenvs/dunst
+target: fuzz_icon_data
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_icon_data/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_icon_data
+    libfuzzer: true
+    timeout: 10

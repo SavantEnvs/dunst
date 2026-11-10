@@ -1,0 +1,10 @@
+project: savantenvs/dunst
+target: fuzz_markup
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_markup/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_markup
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/mayhem/fuzz_markup/fuzz_markup.dict
